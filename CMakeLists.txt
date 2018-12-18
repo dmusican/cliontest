@@ -1,6 +1,8 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.5.1)
 project(cliontest C)
 
 set(CMAKE_C_STANDARD 99)
 
 add_executable(cliontest main.c)
+add_executable(run_valgrind run_valgrind.c)
+add_dependencies(run_valgrind cliontest)
